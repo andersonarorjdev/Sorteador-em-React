@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Caixa, Numeros, Corpo } from '../../styles/styles';
 import Fundo from '../../images/fundo.jpg'
+import '../../styles/styles';
 
 export default props =>{
 
@@ -18,22 +19,26 @@ export default props =>{
         }
         return sorteados;
     } 
-    Sorteio(5)
-    const nomeInicial = 'Anderson';
-    const NovoNome = 'junior'
+
     const NumerosIniciais = Array(props.quantidade || 6).fill(0);
     const [dados, setDados] = useState(NumerosIniciais);
     const [valor, setValor] = useState(NumerosIniciais);
-    const [nome, setNome] = useState(nomeInicial);
     const quantia = valor === 0 ?  6 : valor;
+
+    const Reseta = _ => {
+        setValor(NumerosIniciais);
+        setDados(NumerosIniciais);
+    }
 
     return(
         <Caixa fonte={20} wallpaper={Fundo}> 
             <Corpo>
                 <input type="number" value={valor} onChange={e => {setValor(+e.target.value);}} />
-                <Numeros>{dados.join('  ')}</Numeros>
+                <Numeros>
+                    {dados.join('  ')}
+                </Numeros>
                 <button onClick={() => {setDados(Sorteio(quantia))}}>Sortear</button>
-                <button onClick={() => {setDados(NumerosIniciais)}}>Novo Sorteio</button>
+                <button onClick={() => {Reseta()}}>Novo Sorteio</button>
             </Corpo>
         </Caixa>
     );
