@@ -25,9 +25,20 @@ export default props =>{
     const [valor, setValor] = useState(NumerosIniciais);
     const quantia = valor === 0 ?  6 : valor;
 
+    //Limpa os campos para gerar um novo sorteio
     const Reseta = _ => {
         setValor(NumerosIniciais);
         setDados(NumerosIniciais);
+    }
+
+    const VerificaSorteio = _ =>{
+        if(valor == NumerosIniciais){
+            let MensagemInserevalor = "Primeiro Insira os dados!";
+            setDados(MensagemInserevalor)
+        }
+        else{
+            Reseta();
+        }
     }
 
     return(
@@ -38,7 +49,8 @@ export default props =>{
                     {dados.join('  ')}
                 </Numeros>
                 <button onClick={() => {setDados(Sorteio(quantia))}}>Sortear</button>
-                <button onClick={() => {Reseta()}}>Novo Sorteio</button>
+                {/* <button onClick={() => {Reseta()}}>Novo Sorteio</button> */}
+                <button onClick={() => {VerificaSorteio()}}>Novo Sorteio</button>
             </Corpo>
         </Caixa>
     );
