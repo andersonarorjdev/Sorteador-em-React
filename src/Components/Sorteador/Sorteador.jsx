@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import { Caixa, Numeros, Corpo } from '../../styles/styles';
-import Fundo from '../../images/fundo.jpg'
-import '../../styles/styles';
+import { Caixa, Numeros, Corpo, Credits, Title} from '../../styles/styles';
+import  '../../styles/styles';
+import '../../styles/Reset.css';
 
 export default props =>{
 
@@ -42,16 +42,17 @@ export default props =>{
     }
 
     return(
-        <Caixa fonte={20} wallpaper={Fundo}> 
-            <Corpo>
-                <input type="number" value={valor} onChange={e => {setValor(+e.target.value);}} />
-                <Numeros>
-                    {dados.join('  ')}
-                </Numeros>
+        <Caixa > 
+            <Title> React Sorteador</Title>
+            <Corpo className="Corpo">
+                <input type="number" placeholder="Digite aqui a quantia de numeros" value={valor} onChange={e => {setValor(+e.target.value);}} />
+                <Numeros>{dados.join('  ')}</Numeros>
                 <button onClick={() => {setDados(Sorteio(quantia))}}>Sortear</button>
-                {/* <button onClick={() => {Reseta()}}>Novo Sorteio</button> */}
                 <button onClick={() => {VerificaSorteio()}}>Novo Sorteio</button>
             </Corpo>
+            <Credits>
+                Developed BY Anderson ARORJ.
+            </Credits>
         </Caixa>
     );
 }
