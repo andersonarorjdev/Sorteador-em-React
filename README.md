@@ -1,4 +1,4 @@
-<h1 align="center"> Name project👋</h1>
+<h1 align="center">Welcome to React-Draw👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="LICENSE" target="_blank">
@@ -10,17 +10,26 @@
 </p>
 
 
-<h4>I know that you use with a lot of times every day,🌝 but you can create it?🤔</h4>
+<h4>Simple, fast and beautifull, this tool was made to choose which one of your friends wiill pay the dinner.🍴 I promisse, will not you!🙅</h4>
 
-> I already tried to clone much interfaces,😎 somes i can and somes dont was good 😢. But, i think everyone, one time on life already did a search in the famous Google.
-> 
->> So...why don't try to do it?🤔🚀
+> This tool was made to help you to choose random numbers, fast! 🎰🎲.
+
+
+## Enjoy!🚀
+
+<p align="center">
+  <img src="./src/images/screen/Sorteador1.png">
+</p>
+
+<p align="center">
+  <img src="./src/images/screen/Sorteador2.png">
+</p>
 
 ***
 
 ## Downloading project
 ```sh
-  git clone https://github.com/andersonarorjdev/Google-Search-Page.git
+  git clone https://github.com/andersonarorjdev/React-Sorteador.git
 ```
 
 
@@ -35,6 +44,8 @@ yarn install
 ```sh
 yarn run 
 ``` 
+
+### Good luck! I realy hope that the choose wasn 't you!🏆🤞
 
 ## Author
 
