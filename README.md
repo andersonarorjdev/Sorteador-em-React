@@ -27,19 +27,19 @@
 
 ***
 
-## Downloading project
+## Downloading project⬇️
 ```sh
   git clone https://github.com/andersonarorjdev/React-Sorteador.git
 ```
 
 
-## Install the Dependencies
+## Install the Dependencies🖥
 
 ```sh
 yarn install
 ```
 
-## Starting the server to see the project
+## Starting the server to see the project👀
 
 ```sh
 yarn run 
